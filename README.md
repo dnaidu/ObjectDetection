@@ -5,11 +5,11 @@ This project demonstrates how to run **YOLO11n.pt** (a pre-trained YOLOv8 model)
 ---
 
 ## 📘 Overview  
-- **Model**: `yolo11n.pt` (small YOLOv8 model)  
+- **Model**: `yolo11n.pt` (small YOLOv8 model) https://docs.ultralytics.com/models/  
 - **Input**: Video file or RTSP stream  
 - **Output**: Annotated video + cropped detection images  
 - **GPU**: NVIDIA RTX 50-series (CUDA 13.0 required)  
-- **Docker**: Uses NVIDIA CUDA base image (Ubuntu 24.04)  
+- **Docker**: Uses NVIDIA CUDA base image (Ubuntu 24.04)
 
 ---
 
@@ -93,7 +93,7 @@ docker run --gpus all -it --rm -v /home/vols/.nvidia-cuda/person_detection/:/wor
 yolo detect predict model=yolo11n.pt source=Person-Test.mp4 classes=0 save=True save_crop=True
 ```
 
-#### OR use an RTSP stream instead of a video file:
+#### OR use RTSP stream instead of a video file:
 ```bash
 yolo detect predict model=yolo11n.pt source="rtsp://<username>:<password>@<ip>/stream" classes=0 save=True save_crop=True
 ```
