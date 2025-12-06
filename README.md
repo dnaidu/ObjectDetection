@@ -66,7 +66,7 @@ yolo-person-detect                            latest                           c
 docker run --gpus all -it --rm -v /home/vols/.nvidia-cuda/person_detection/:/workspace yolo-person-detect
 
 ## 7) Run Object or person detection inside the container & output the detection.
-yolo detect predict model=yolo11n.pt source=RVIEW_PersonDog-Test.mp4 classes=0 save=True save_crop=True
+yolo detect predict model=yolo11n.pt source=Person-Test.mp4 classes=0 save=True save_crop=True
 
 OR
 
